@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity //implements View.OnClickListener // Solo si implementamos clase
 {
     Button botoncito;
-    TextView tex    to;
+    TextView texto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

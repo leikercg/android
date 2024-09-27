@@ -2,33 +2,26 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/texto"
+        android:id="@+id/edad_secondary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HOLA MUNDO123"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="36dp"
+        android:text="Edad"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/nombre_secodary" />
 
-    <Button
-        android:id="@+id/botoncito"
+    <TextView
+        android:id="@+id/nombre_secodary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:onClick="pulsar"
-        android:text="Botoncito"
-        app:layout_constraintBottom_toTopOf="@+id/texto"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="65dp"
+        android:text="Nombre"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

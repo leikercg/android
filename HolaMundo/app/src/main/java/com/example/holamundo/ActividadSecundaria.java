@@ -21,3 +21,5 @@ public class ActividadSecundaria extends Activity {
         texto.setText(nombre);
     }
 }
+
+

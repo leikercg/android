@@ -26,14 +26,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick(View v) {
 
-        //Toast.makeText(this, nombre.getText().toString(),Toast.LENGTH_LONG).show();
-        Toast tostada;
-        tostada = Toast.makeText(this, nombre.getText().toString(), Toast.LENGTH_LONG);
+            //Toast.makeText(this, nombre.getText().toString(),Toast.LENGTH_LONG).show();
+            Toast tostada;
+            tostada = Toast.makeText(this, nombre.getText().toString(), Toast.LENGTH_LONG);
 
-        tostada.show();
+            tostada.show();
 
-        Intent intento = new Intent(MainActivity.this, ActividadSecundaria.class);
-        intento.putExtra("NOMBRE", nombre.getText().toString());
-        startActivity(intento);
+            Intent intento = new Intent(MainActivity.this, ActividadSecundaria.class);
+            intento.putExtra("NOMBRE", nombre.getText().toString());
+            startActivity(intento);
     }
 }
