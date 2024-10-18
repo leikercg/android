@@ -19,6 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MySelection"
-include(":app")
+rootProject.name = "Spinners"
 include(":app")

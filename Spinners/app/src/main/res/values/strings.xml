@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Spinners</string>
+    <string-array name="datos_lista">
+        <item>Leiker</item>
+        <item>David</item>
+        <item>Castillo</item>
+        <item>Guzman</item>
+        <item>Calva</item>
+    </string-array>
+</resources>
