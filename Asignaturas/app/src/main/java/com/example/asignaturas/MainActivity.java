@@ -80,6 +80,7 @@ ArrayList <String> seleccionadas = new ArrayList<String>();
         intento.putStringArrayListExtra("ASIGNATURAS", seleccionadas);
 
         startActivity(intento);
+        Toast.makeText(this,getString(R.string.titulo_buenosdias), Toast.LENGTH_SHORT).show();
     }
 
 
