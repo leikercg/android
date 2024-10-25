@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
     EditText num1, num2; // son los numero introducidos
     Button boton; // Es el boton de calcular
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        tv.setText("Operación");
     }
 
     @Override
@@ -82,17 +82,53 @@ public class MainActivity extends AppCompatActivity {
         //return true; esto es del PDF
     }
 
+    public void calcular(View v) {
+        if (tv.getText().toString().equalsIgnoreCase("elem1")){ // Por que reutiñizamos el texto que fija el spinner
+            Toast.makeText(this, "Por favor, selecciona una operación primero", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        try {
+            int numero1 = Integer.parseInt(num1.getText().toString());
+            int numero2 = Integer.parseInt(num2.getText().toString());
+            int resultado = 0;
+
+            // Comparaciones de cadena con if-else para realizar la operación
+            String operacion = tv.getText().toString();
+            if (operacion.equals("SUMAR")) {
+                resultado = numero1 + numero2;
+            } else if (operacion.equals("RESTAR")) {
+                resultado = numero1 - numero2;
+            } else if (operacion.equals("MULTIPLICAR")) {
+                resultado = numero1 * numero2;
+            } else if (operacion.equals("DIVIDIR")) {
+                if (numero2 != 0) {
+                    resultado = numero1 / numero2;
+                } else {
+                    Toast.makeText(this, "No se puede dividir por cero", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+            }
+            Toast.makeText(this, String.valueOf(resultado), Toast.LENGTH_SHORT).show();
+        } catch (NumberFormatException e) {
+            Toast.makeText(this, "Por favor, ingresa números válidos", Toast.LENGTH_SHORT).show();
+        }
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         if (item.getItemId() == R.id.opcion_sumar) {
             tv.setText("SUMAR");
+            boton.setText("+");
         } else if (item.getItemId() == R.id.opcion_restar) {
             tv.setText("RESTAR");
+            boton.setText("-");
         } else if (item.getItemId() == R.id.opcion_multiplicar) {
             tv.setText("MULTIPLICAR");
+            boton.setText("x");
         } else if (item.getItemId() == R.id.opcion_dividir) {
             tv.setText("DIVIDIR");
+            boton.setText("/");
         }
         return true;
     }

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.227"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.536" />
+
+    <Button
+        android:id="@+id/mensaje"
+        android:layout_width="352dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="40dp"
+        android:text="Diálogo mensaje"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/dos_botones"
+        android:layout_width="354dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="166dp"
+        android:text="Diálogo dos botones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/framento_dos_botones"
+        android:layout_width="354dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginEnd="166dp"
+        android:text="Fragmento 2 botones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/idioma"
+        android:layout_width="354dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="252dp"
+        android:layout_marginEnd="166dp"
+        android:text="Selección de idioma"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/idoma_pequeño"
+        android:layout_width="119dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="356dp"
+        android:text="Idioma"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.808"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/personalizado"
+        android:layout_width="354dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="440dp"
+        android:layout_marginEnd="166dp"
+        android:text="Dialogo personalizado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/hora"
+        android:layout_width="354dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="576dp"
+        android:layout_marginEnd="166dp"
+        android:text="Hora"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/fecha"
+        android:layout_width="354dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="508dp"
+        android:layout_marginEnd="166dp"
+        android:text="Fecha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
