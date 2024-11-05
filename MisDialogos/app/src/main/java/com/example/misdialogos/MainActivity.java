@@ -4,12 +4,13 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements DialogoSeleccion.IdiomaLista {
     AlertDialog.Builder ventana;
     TextView tv;
 
@@ -23,12 +24,28 @@ public class MainActivity extends AppCompatActivity {
         tv = findViewById(R.id.tv);
     }
 
-    public void clickFragmento(View v){
+    public void clickFragmento(View v) {
         Fragmento2Botones f2b = new Fragmento2Botones();
 
         FragmentManager fm = getSupportFragmentManager();
 
-        f2b.show(getSupportFragmentManager(),"xxx");
+        f2b.show(getSupportFragmentManager(), "xxx");
+    }
+
+    public void clickSeleccion(View v) {
+        DialogoSeleccion ds = new DialogoSeleccion();
+        ds.show(getSupportFragmentManager(), "yyy");
+    }
+
+
+    @Override
+    public void idiomaSeleccionado(String idioma, int posicion) {
+        tv.setText(idioma+" posición:"+(posicion+1));
+    }
+
+    public void clickPersonalizado(View v){
+        FragmentoPersonalizado fp = new FragmentoPersonalizado();
+        fp.show(getSupportFragmentManager(),"zzz");
     }
 
     public void clickDialogoMensaje(View v) {
