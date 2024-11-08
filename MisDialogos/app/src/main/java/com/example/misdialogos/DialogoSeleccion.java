@@ -15,9 +15,9 @@ public class DialogoSeleccion extends DialogFragment {
     IdiomaLista idiomaLista;
 
     @Override
-    public void onAttach(@NonNull Context context) {
+    public void onAttach(@NonNull Context context) { // Aqui iniciamos el procedimiento.
         super.onAttach(context);
-        idiomaLista = (IdiomaLista)getActivity();
+        idiomaLista = (IdiomaLista)getActivity(); // Aquí obtenemos la actividad principal
     }
 
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
