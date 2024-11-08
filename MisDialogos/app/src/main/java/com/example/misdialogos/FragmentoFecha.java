@@ -1,0 +1,44 @@
+package com.example.misdialogos;
+
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.DialogFragment;
+
+public class FragmentoFecha extends DialogFragment implements DatePickerDialog.OnDateSetListener {
+
+    Fecha fecha;
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        fecha=(Fecha)getActivity();
+    }
+
+    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) { //Crea la pantalla que se muestra
+
+        DatePickerDialog capturaFecha = new DatePickerDialog(getActivity(),this::onDateSet,2024,10,8); // indicar el establecedor de fechas
+        return capturaFecha;
+    }
+
+    @Override
+    public void onDateSet(DatePicker datePicker, int i, int i1, int i2) { // evento que estaclece la fecha
+        Toast.makeText(getActivity(), i+ "/"+(i1+1)+"/"+i2, Toast.LENGTH_SHORT).show();
+        fecha.pasarFecha(i,i1,i2);
+    }
+
+    public interface Fecha{
+        public void pasarFecha(int año,int mes, int dia);
+    }
+}

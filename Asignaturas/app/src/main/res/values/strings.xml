@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Asignaturas</string>
+    <string name="titulo"> ASIGNATURAS</string>
+    <string name="titulo_frances">Francés</string>
+    <string name="titulo_ingles">Ingles</string>
+    <string name="titulo_aleman">Aleman</string>
+    <string name="titulo_idiomas">Idiomas</string>
+    <string name="titulo_enviar">Enviar</string>
+    <string name="titulo_modulos">Modulos</string>
+    <string name="titulo_buenosdias">Buenos días</string>
+
+</resources>
