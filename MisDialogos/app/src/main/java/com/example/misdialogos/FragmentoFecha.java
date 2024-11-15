@@ -16,6 +16,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
+import java.util.Calendar;
+
 public class FragmentoFecha extends DialogFragment implements DatePickerDialog.OnDateSetListener {
 
     Fecha fecha;
@@ -27,8 +29,12 @@ public class FragmentoFecha extends DialogFragment implements DatePickerDialog.O
     }
 
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) { //Crea la pantalla que se muestra
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH); // Los meses van de 0 (enero) a 11 (diciembre)
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
 
-        DatePickerDialog capturaFecha = new DatePickerDialog(getActivity(),this::onDateSet,2024,10,8); // indicar el establecedor de fechas
+        DatePickerDialog capturaFecha = new DatePickerDialog(getActivity(),this::onDateSet,year,month,day); // indicar el establecedor de fechas
         return capturaFecha;
     }
 
