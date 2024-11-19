@@ -18,6 +18,12 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContract;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -25,12 +31,18 @@ import androidx.fragment.app.FragmentManager;
 public class MainActivity extends AppCompatActivity implements DialogoSeleccion.IdiomaLista, FragmentoPersonalizado.DatoEdad, FragmentoPersonalizado.DatoNombre, FragmentoFecha.Fecha, FragmentoHora.Hora  {
     AlertDialog.Builder ventana;
     TextView tv;
+    ActivityResultLauncher<Intent> lanzador = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult resultado) { //es ek resultado del intent
+                   Intent i= resultado.getData();
+                    tv.setText(i.getStringExtra("NOMBRE"));// Recoger los datos del edit text
+                    tv.append(i.getStringExtra("NOMBRELISTA"));
+                }
+            }
+    ); // para abrir activitys y volver
 
-    // Abrir actividad secundaria con el boton de seleccionar nombre
-    public void clickNombre(View view){
-        Intent intent = new Intent(MainActivity.this, SecondaryActivity.class);
-        startActivity(intent); // Iniciar la actividad secundaria
-    }
+
 
     ////Mostrar el menú
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -157,5 +169,21 @@ public class MainActivity extends AppCompatActivity implements DialogoSeleccion.
 
         dialogoDosBotones.show(); // Muestra el diálogo con dos botones
     }
+
+    // Abrir actividad secundaria con el boton de seleccionar nombre
+    public void clickNombre(View view){
+        Intent i = new Intent(MainActivity.this, SecondaryActivity.class);
+        // startActivity(i); // Iniciar la actividad secundaria
+        //Meotodo antiguo //startActivityForResult(i, 1);// Volver a la actividad anterior, se pasa el intento y un número de identificacion
+        lanzador.launch(i); // Lanzamos el intent que acabos de crear
+    }
+
+    /* metoodo antiguo
+     @Override
+     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) { // Esto se ejecutar al volver a la actividad, data es un intent
+        super.onActivityResult(requestCode, resultCode, data);
+        tv.setText(data.getStringExtra("NOMBRE"));// Recoger los datos del edit text
+        tv.append(data.getStringExtra("NOMBRELISTA"));
+    }*/
 
 }
