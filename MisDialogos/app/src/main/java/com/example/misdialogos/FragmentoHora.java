@@ -33,13 +33,13 @@ public class FragmentoHora extends DialogFragment implements TimePickerDialog.On
         return new TimePickerDialog(getActivity(), this::onTimeSet, hour, minute, true);
 
         // El último parámetro "true" indica si es en formato de 24 horas (false para 12 horas)
-        return capturaHora;
+        //return capturaHora;
     }
 
     @Override
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) { //evento que ocurre cuando el usuario selecciona la hora
         //Pasa los datos seleccionados a la interfaz implementada en la main
-        hora.pasarHora(hourOfDay,minute);
+        hora.pasarHora(hourOfDay,minute); // Se pasan los datos por la interface
     }
     public interface Hora{
         public void pasarHora(int hora, int min);

@@ -118,14 +118,14 @@ public class MainActivity extends AppCompatActivity implements DialogoSeleccion.
         FragmentoHora fh = new FragmentoHora();
         fh.show(getSupportFragmentManager(), "hora");
     }
-<<<<<<< HEAD
+/*
 
     public void pasarHora(int hora, int min) {//metodo de la interfaz
-        tv.setText(hora + ":" + min);
-=======
+        tv.setText(hora + ":" + min);*/
+
     public void pasarHora(int hora, int min) {//metodo de la interfaz, recibe los datos y realiza algo con ellos
         tv.setText(hora+":"+min);
->>>>>>> 8e3c6e118373b4d2f3cc7e57f8a6a72576c277d0
+
     }
 
     @Override
