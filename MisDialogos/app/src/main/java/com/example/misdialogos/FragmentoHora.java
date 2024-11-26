@@ -23,8 +23,9 @@ public class FragmentoHora extends DialogFragment implements TimePickerDialog.On
 
 
         // Creamos el TimePickerDialog con los parámetros correspondientes
-        return new TimePickerDialog(getActivity(), this::onTimeSet, 12, 00, true);
+        TimePickerDialog capturaHora= new TimePickerDialog(getActivity(), this::onTimeSet, 12, 00, true);
         // El último parámetro "true" indica si es en formato de 24 horas (false para 12 horas)
+        return capturaHora;
     }
 
     @Override

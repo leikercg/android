@@ -18,7 +18,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
-public class MainActivity extends AppCompatActivity implements DialogoSeleccion.IdiomaLista, FragmentoPersonalizado.DatoEdad, FragmentoPersonalizado.DatoNombre, FragmentoFecha.Fecha {
+public class MainActivity extends AppCompatActivity implements DialogoSeleccion.IdiomaLista, FragmentoPersonalizado.DatoEdad, FragmentoPersonalizado.DatoNombre, FragmentoFecha.Fecha, FragmentoHora.Hora {
     AlertDialog.Builder ventana;
     TextView tv;
 
@@ -48,38 +48,41 @@ public class MainActivity extends AppCompatActivity implements DialogoSeleccion.
 
     @Override
     public void idiomaSeleccionado(String idioma, int posicion) {
-        tv.setText(idioma+" posición:"+(posicion+1));
+        tv.setText(idioma + " posición:" + (posicion + 1));
     }
 
-    public void clickPersonalizado(View v){
+    public void clickPersonalizado(View v) {
         FragmentoPersonalizado fp = new FragmentoPersonalizado();
-        fp.show(getSupportFragmentManager(),"zzz");
+        fp.show(getSupportFragmentManager(), "zzz");
     }
 
-    public void clicKFecha(View view){
-        FragmentoFecha ff= new FragmentoFecha();
-        ff.show(getSupportFragmentManager(),"fecha");
+    public void clicKFecha(View view) {
+        FragmentoFecha ff = new FragmentoFecha();
+        ff.show(getSupportFragmentManager(), "fecha");
     }
 
-    public void clickHora(View view){
-        FragmentoHora fh= new FragmentoHora();
-        fh.show(getSupportFragmentManager(),"hora");
+    public void clickHora(View view) {
+        FragmentoHora fh = new FragmentoHora();
+        fh.show(getSupportFragmentManager(), "hora");
     }
+
     public void pasarHora(int hora, int min) {//metodo de la interfaz
-        tv.setText(hora+":"+min);
+        tv.setText(hora + ":" + min);
     }
 
     @Override
     public void pasarDatosNombre(String nombre) { //metodo de la interfaz
-        tv.setText("Nombre: "+ nombre );
+        tv.setText("Nombre: " + nombre);
     }
+
     @Override
     public void pasarDatosEdad(int edad) {//metodo de la interfaz
-        tv.setText(" Edad: "+edad);
+        tv.setText(" Edad: " + edad);
     }
+
     @Override
     public void pasarFecha(int año, int mes, int dia) {//metodo de la interfaz
-        tv.setText(dia+ "/"+(mes+1)+"/"+año);
+        tv.setText(dia + "/" + (mes + 1) + "/" + año);
     }
 
 
