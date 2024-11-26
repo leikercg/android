@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             b.setOnClickListener(this); // La clase debera implementar el onclickListener
             gridLayout.addView(b); // Añadir el botón al gridlayout
         }
-        
+
         colorear();
     }
 
