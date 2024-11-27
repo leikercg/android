@@ -56,4 +56,22 @@ EN la main:
 
 
 
+################# CREAR UN SPINNER ########################################
+1. Añadir el spinner en el layput
+2. Declararlo en la actividad
+3. Crear el adaptrado. Pasarle la lista de datos.
+4. Indicar que hacer al ser selecionado un elemento setOnItemSelectedListener().
+
+
+################################ comprobar radiosbuttons #########################
+
+radioGroup radioGroup = findViewById(R.id.radioGroup);
+int selectedId = radioGroup.getCheckedRadioButtonId();
+RadioButton selectedRadioButton = findViewById(selectedId);
+
+// Para saber cuál es la opción seleccionada
+String selectedOption = selectedRadioButton.getText().toString();
+Toast.makeText(this, "Opción seleccionada: " + selectedOption, Toast.LENGTH_SHORT).show();
+
+
 
