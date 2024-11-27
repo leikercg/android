@@ -6,7 +6,33 @@
 
 
 ########## Crear fragemntos ########
-1. se crea el layout en resources. (ojo, añadir al manifest)
+1. se crea el layout en resources.
 2. se crea la clase que creara lanzara el dialogo en java,  tiene que extender DialogoFragment
-3. en la clase creada usar onCreateDialog para crear la ventana. (Puede tener metodos de aceptar y cancelar)
+3. en la clase creada usar onCreateDialog para crear la ventana. (Puede tener metodos de aceptar y cancelar y titulo)
+4. Establecer que recurso XML mostrar  <-----IMPORTANTE @@@@@@
+5. Establecer titulo.
+6. Establecer funcionalidades de los botones aceptar
+
+
+########## Crear fragemntos que devuelven información ########
+
+En el fragment:
+1. se crea el layout en resources.
+2. se crea la clase que creara lanzara el dialogo en java,  tiene que extender DialogoFragment
+3. en la clase creada usar onCreateDialog para crear la ventana. (Puede tener metodos de aceptar y cancelar y titulo)
+4. usar una interface.
+5. implementar el método onAttach() --> nos da el contexto de la actividad
+5. Establecer que recurso XML mostrar  <-----IMPORTANTE @@@@@@
+6. Usar la interfaz declarada.
+5. Establecer titulo.
+6. Establecer funcionalidades de los botones aceptar
+
+
+EN la main:
+1. Implementar la interfaz.
+2. usar la interfaz y los datos recibidos
+
+
+
+
 
