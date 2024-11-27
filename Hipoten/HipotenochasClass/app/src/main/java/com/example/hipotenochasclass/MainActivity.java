@@ -199,7 +199,7 @@ public class MainActivity extends AppCompatActivity implements DificultadFrament
 
         altoPantalla = p.y;
         anchoPantalla = p.x;
-
+  
         gridLayout = findViewById(R.id.grilla_layout);// Inicializado, OJO REVISAR LA CLASE QUE SE IMPORTA
         añadirCeldas(8);
 
