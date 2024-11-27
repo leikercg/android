@@ -1,11 +1,11 @@
-#################### Menus############
+#################### Menus##########################################################################################
 1. se crea el menu en layout
 2. se muestra el menu en la actividad que se quiera, hay que usar onMenucreate.
 3. Ojo con la actionBar del tema de themes de resources
 4. En la main definir onOptionsItemSelected() y que se hace en cada caso.
 
 
-########## Crear fragemntos ########
+########## Crear fragemntos ############################################################################################################################
 1. se crea el layout en resources.
 2. se crea la clase que creara lanzara el dialogo en java,  tiene que extender DialogoFragment
 3. en la clase creada usar onCreateDialog para crear la ventana. (Puede tener metodos de aceptar y cancelar y titulo)
@@ -14,7 +14,7 @@
 6. Establecer funcionalidades de los botones aceptar
 
 
-########## Crear fragemntos que devuelven información ########
+########## Crear fragemntos que devuelven información ##############################################################################################
 
 En el fragment:
 1. se crea el layout en resources.
@@ -22,16 +22,37 @@ En el fragment:
 3. en la clase creada usar onCreateDialog para crear la ventana. (Puede tener metodos de aceptar y cancelar y titulo)
 4. usar una interface.
 5. implementar el método onAttach() --> nos da el contexto de la actividad
-5. Establecer que recurso XML mostrar  <-----IMPORTANTE @@@@@@
-6. Usar la interfaz declarada.
-5. Establecer titulo.
-6. Establecer funcionalidades de los botones aceptar
+6. Establecer que recurso XML mostrar  <-----IMPORTANTE @@@@@@
+7. Usar la interfaz declarada.
+8. Establecer titulo.
+9. Establecer funcionalidades de los botones aceptar
 
 
 EN la main:
 1. Implementar la interfaz.
 2. usar la interfaz y los datos recibidos
 
+
+##### cambiar idioma########################################################################################################################
+1. String en resources
+2. Añadir lenguaje
+3. Añadir key y todas las traducciones.
+
+
+##### Agregar img ##################################################################################################################################
+1. Agregar imagenes en resource
+2. Mirar mipmap
+3. Acceder a ella mediante R.mipmap. o desde donde se encuentre
+
+
+################### Crear otra actividad y devolver informacion##############################################################################################
+1. Crear una actividad en recursos
+2. Extender AppCompatActivity y metodo ocreate, indicar que activty mostrar
+3. Enviar por intent los datos a recoger en la main
+
+--En la MAin modelo corto:
+1. tener un metodo que lance la actividad secundari con startActivityForResult
+2. Sobreescribir protected void onActivityResult
 
 
 

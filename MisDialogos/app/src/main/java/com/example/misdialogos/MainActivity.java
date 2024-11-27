@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements DialogoSeleccion.
 
     AlertDialog.Builder ventana;
     TextView tv;
+    //Metodo nuevo para volver a la main
     ActivityResultLauncher<Intent> lanzador = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
                 @Override
@@ -42,7 +43,8 @@ public class MainActivity extends AppCompatActivity implements DialogoSeleccion.
                     tv.append(i.getStringExtra("NOMBRELISTA"));
                 }
             }
-    ); // para abrir activitys y volver
+    );
+    // para abrir activitys y volver
 
 
 
@@ -183,13 +185,14 @@ public class MainActivity extends AppCompatActivity implements DialogoSeleccion.
     // Abrir actividad secundaria con el boton de seleccionar nombre
     public void clickNombre(View view){
         Intent i = new Intent(MainActivity.this, SecondaryActivity.class);
-        // startActivity(i); // Iniciar la actividad secundaria
-        //Meotodo antiguo //startActivityForResult(i, 1);// Volver a la actividad anterior, se pasa el intento y un número de identificacion
-        lanzador.launch(i); // Lanzamos el intent que acabos de crear
+     //No hace falta ni el antiguo ni en el moderno   // startActivity(i); // Iniciar la actividad secundaria
+      // Metodo antiguo // startActivityForResult(i, 1);// Volver a la actividad anterior, se pasa el intento y un número de identificacion
+      lanzador.launch(i); // Lanzamos el intent que acabos de crear
     }
 
-    /* metoodo antiguo
-     @Override
+
+    // Metodo antiguos
+    /* @Override
      protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) { // Esto se ejecutar al volver a la actividad, data es un intent
         super.onActivityResult(requestCode, resultCode, data);
         tv.setText(data.getStringExtra("NOMBRE"));// Recoger los datos del edit text
