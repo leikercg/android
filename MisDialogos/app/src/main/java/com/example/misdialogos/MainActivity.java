@@ -185,9 +185,9 @@ public class MainActivity extends AppCompatActivity implements DialogoSeleccion.
     // Abrir actividad secundaria con el boton de seleccionar nombre
     public void clickNombre(View view){
         Intent i = new Intent(MainActivity.this, SecondaryActivity.class);
-        // startActivity(i); // Iniciar la actividad secundaria
+     //No hace falta ni el antiguo ni en el moderno   // startActivity(i); // Iniciar la actividad secundaria
       // Metodo antiguo // startActivityForResult(i, 1);// Volver a la actividad anterior, se pasa el intento y un número de identificacion
-       lanzador.launch(i); // Lanzamos el intent que acabos de crear
+      lanzador.launch(i); // Lanzamos el intent que acabos de crear
     }
 
 
@@ -200,12 +200,3 @@ public class MainActivity extends AppCompatActivity implements DialogoSeleccion.
     }*/
 
 }
-/*
-* create or replace TYPE T_ALUMNO AS OBJECT
-(
-  AL PERSONA,
-  NOTA1 NUMBER,
-  NOTA2 NUMBER,
-  NOTA3 NUMBER
-);
-* */

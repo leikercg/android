@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity implements DificultadFrament
 
         for (int i = 0; i < dimension*dimension; i++) { // Cambié el número de botones a 64
             Button b = new Button(this);
-            ViewGroup.LayoutParams lp = new ViewGroup.LayoutParams(anchoPantalla / dimension, (altoPantalla-200) / dimension);
+            ViewGroup.LayoutParams lp = new ViewGroup.LayoutParams(anchoPantalla / dimension, (anchoPantalla) / dimension);
             b.setLayoutParams(lp);
 
           //  b.setText(""+i);
@@ -130,16 +130,15 @@ public class MainActivity extends AppCompatActivity implements DificultadFrament
             b.setId(View.generateViewId()); // Genera la id del botón automáticamente
             if (lista.contains(i))
                 b.setBackgroundColor(Color.rgb(125,24,193));
-            b.setOnClickListener(v -> { //evento click
-                // Acción para cada botón
+            b.setOnClickListener(v -> { //evento click corto
+                // Acción para el clic corto
                 Toast.makeText(this, "Corto", Toast.LENGTH_SHORT).show();
             });
 
-            b.setOnLongClickListener(v -> { //evento click
-                // Acción para cada botón
+            b.setOnLongClickListener(v -> { //evento clic largo
+                // Acción para el clic largo
                 Toast.makeText(this, "Largo", Toast.LENGTH_SHORT).show();
-
-                return false;
+                return true;  // Devuelve 'true' para indicar que el evento ha sido consumido
             });
 
             gridLayout.addView(b); // Añadir el botón al GridLayout
@@ -156,7 +155,7 @@ public class MainActivity extends AppCompatActivity implements DificultadFrament
             altoPantalla = p.y;
             anchoPantalla = p.x;
             gridLayout = findViewById(R.id.grilla_layout);// Inicializado, OJO REVISAR LA CLASE QUE SE IMPORTA
-            añadirCeldas(12);
+            añadirCeldas(16);
         } else if (nivel.compareTo("Principiante")==0) {
             p = new Point(); //puntero
             Display pantallaDisplay = getWindowManager().getDefaultDisplay(); // Coger las dimensiones de la pantalla que se va a lanzar

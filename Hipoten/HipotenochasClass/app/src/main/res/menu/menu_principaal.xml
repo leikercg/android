@@ -7,7 +7,7 @@
         android:title="Instruciones" />
     <item
         android:id="@+id/itemDificultad"
-        android:title="Nivel" />
+        android:title="@string/nivel" />
     <item
         android:id="@+id/itemIcono"
         android:title="Selecionar icono" />
