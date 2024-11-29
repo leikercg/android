@@ -16,7 +16,7 @@ public class Fragmento2Botones extends DialogFragment {
         ventana.setTitle("DIÁLOGO CON FRAGMENTO");
         ventana.setMessage("Diálogo que utiliza un fragmento");
         // TODO: 29/10/2024   Poner ícono
-
+        ventana.setIcon(R.drawable.ic_launcher_foreground);
         ventana.setNegativeButton("SÍ", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {

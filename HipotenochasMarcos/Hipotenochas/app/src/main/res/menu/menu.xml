@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_Instrucciones"
+        android:title="Instrucciones" />
+    <item
+        android:id="@+id/item_NuevoJuego"
+        android:title="Nuevo Juego" />
+    <item
+        android:id="@+id/item_ConfiguraJuego"
+        android:title="Configuración" />
+    <item
+        android:id="@+id/item_SeleccionPersonaje"
+        android:title="Selecciona Personaje"
+        android:icon="@drawable/hipotenocha"
+        app:showAsAction="ifRoom"/>
+</menu>
