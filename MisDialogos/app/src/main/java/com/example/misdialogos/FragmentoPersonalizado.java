@@ -35,9 +35,9 @@ public class FragmentoPersonalizado extends DialogFragment {
 
         LayoutInflater inflador = getActivity().getLayoutInflater();
         View vistaVentana = inflador.inflate(R.layout.dialogo_personalizado, null);//  Creamos la vista con el inflador y el XML
+        ventana.setView(vistaVentana); //La vista se crea apartir de XML usando el inflador, establecemos una vista
 
         ventana.setTitle("Entrada de datos");
-        ventana.setView(vistaVentana); //La vista se crea apartir de XML usando el inflador, establecemos una vista
 
         EditText etNombre = vistaVentana.findViewById(R.id.nombre);
         EditText etEdad = vistaVentana.findViewById(R.id.edad);
