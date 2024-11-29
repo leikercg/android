@@ -21,6 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ColoresActivity"></activity>
+        <activity android:name=".CapicuaActivity"></activity>
+        <activity android:name=".MayorActivity"></activity>
+
+
     </application>
 
 </manifest>

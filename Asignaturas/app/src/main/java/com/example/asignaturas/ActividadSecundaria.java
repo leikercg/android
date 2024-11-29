@@ -2,6 +2,7 @@ package com.example.asignaturas;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -45,5 +46,8 @@ public class ActividadSecundaria extends AppCompatActivity {
 
 
 
+    }
+    public void fin(View view){
+        finish(); // Esto cierra la actividad actual y vuelve a la anterior
     }
 }

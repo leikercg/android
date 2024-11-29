@@ -7,13 +7,35 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/buttonColores"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="195dp"
+        android:onClick="onclickColores"
+        android:text="COLORES"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonMayor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:onClick="onclickMayor"
+        android:text="MAYOR"
+        app:layout_constraintStart_toStartOf="@+id/buttonColores"
+        app:layout_constraintTop_toBottomOf="@+id/buttonColores" />
+
+    <Button
+        android:id="@+id/buttonCapicua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:onClick="onclickCapicua"
+        android:text="CAPICPUA"
+        app:layout_constraintStart_toStartOf="@+id/buttonMayor"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMayor" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
