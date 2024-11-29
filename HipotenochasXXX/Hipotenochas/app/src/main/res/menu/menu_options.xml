@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/instructions"
+        android:onClick="showInstructionsDialog"
+        android:title="@string/instructions" />
+
+    <item android:id="@+id/newGame"
+        android:onClick="ResetGame"
+        android:title="@string/new_game" />
+
+    <item android:id="@+id/configGame"
+        android:onClick="ShowDiffSelector"
+        android:title="@string/config_game" />
+
+    <item android:id="@+id/charaSelect"
+        android:onClick="showCharaSelector"
+        android:title="@string/chara_select" />
+</menu>
