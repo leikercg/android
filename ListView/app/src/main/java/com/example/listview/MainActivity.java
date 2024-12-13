@@ -2,7 +2,10 @@ package com.example.listview;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -11,6 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -20,6 +24,15 @@ import androidx.core.view.WindowInsetsCompat;
 //3. Crar adaptador y asjuntarlo
 //4. Crear clase para el item
 //5. Crear layout XML
+
+
+
+/*MENU CONTEXTUAL:
+-Definir la estructura del menu ...XML
+-COnverir el menú en lista ... inflate
+-Asociar el menú a la vista o cualquier cosa
+-Definir listener.
+* */
 
 public class MainActivity extends AppCompatActivity {
     TextView textView;
@@ -57,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.textView);
         listaOpciones = findViewById(R.id.listView); // Recuperamos la lista
+
+        registerForContextMenu(listaOpciones); //asociamos la lista al menu
 
 
         /*ArrayAdapter<String> adaptador = // Creamos un adaptador
@@ -96,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public View getView(int position, View convertView, ViewGroup parent) {// que ejecutar cada vez que se visualice un item
 
             ViewHolder contendor;
             View item = convertView;
@@ -131,5 +146,30 @@ public class MainActivity extends AppCompatActivity {
         TextView subttitulo;
     }
 
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater inflador = getMenuInflater();
 
+        AdapterView.AdapterContextMenuInfo informacionItem = (AdapterView.AdapterContextMenuInfo) menuInfo;
+
+        //menu.setHeaderTitle((AdaptadorTitulares) listaOpciones.getAdapter().getItem(informacionItem.position).toString());
+        inflador.inflate(R.menu.menu_contextual, menu);
+    }
+
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+
+        AdapterView.AdapterContextMenuInfo informacionItem = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        textView.setText(informacionItem.position + 1 + "\t");
+
+        if (item.getItemId() == R.id.item_1) {
+            textView.append("Opción 1");
+        } else if (item.getItemId() == R.id.item_2) {
+            textView.append("Opción 2");
+        }
+
+        // return super.onContextItemSelected(item);// devuelve el item seleccionado del menu
+        return true;
+    }
 }

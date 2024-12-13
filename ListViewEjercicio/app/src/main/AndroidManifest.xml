@@ -10,14 +10,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ListView"
+        android:theme="@style/Theme.ListViewEjercicio"
         tools:targetApi="31">
         <activity
             android:name=".SecondaryActivity"
-            android:exported="false"
-            android:theme="@style/Theme.ListView" />
-        <activity
-            android:name=".MainActivity2"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
