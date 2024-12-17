@@ -1,6 +1,8 @@
 package com.example.listviewejercicio;
 
-public class Alumno {
+import java.io.Serializable;
+
+public class Alumno implements Serializable { // para poder pasar el objeto a la otra actividad
     String nombre;
     float nota;
 

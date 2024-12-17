@@ -96,9 +96,9 @@ public class MainActivity extends AppCompatActivity {
 
             // Cambiamos la imagen dependiendo de la nota
             if (alumno.getNota() < 5) {
-                contendor.imagen.setImageResource(R.drawable.ic_launcher_background);
+                contendor.imagen.setImageResource(R.drawable.suspendido);
             } else {
-                contendor.imagen.setImageResource(R.drawable.ic_launcher_foreground);
+                contendor.imagen.setImageResource(R.drawable.aprobado);
             }
             return item;
         }
@@ -132,8 +132,11 @@ public class MainActivity extends AppCompatActivity {
             lanzador.launch(i); // Lanzamos el intent que acabos de crear
         } else if (item.getItemId() == R.id.itemSalir) {
 
-
-            Toast.makeText(this, "salir del programa", Toast.LENGTH_SHORT).show();
+            finish();
+            // Cierra todas las actividades y finaliza la aplicación
+            finishAffinity();
+            // Termina el proceso de la aplicación, recomendado
+            System.exit(0);
 
         }
         return true;

@@ -58,7 +58,12 @@ public class SecondaryActivity extends AppCompatActivity {
         Intent i = new Intent(); // Creamos un intento
         i.putExtra("NOMBRE", editText.getText().toString());
         i.putExtra("NOMBRELISTA"," "+ nombreSeleccionado);
-        setResult(RESULT_OK,i);
+
+
+
+
+
+        
         finish();
 
     }
