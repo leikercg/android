@@ -1,6 +1,7 @@
 package com.example.bdrecycle;
 
 import android.content.Context;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,7 +54,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.Micontenedor> impl
         }
     }
 
-    public class Micontenedor extends RecyclerView.ViewHolder { // Clase interna
+    public class Micontenedor extends RecyclerView.ViewHolder implements View.OnCreateContextMenuListener { // Clase interna, para menus contextuales implementar esto
 
         // Atributos
         TextView tvNombre, tvEdad;
@@ -65,8 +66,14 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.Micontenedor> impl
             tvNombre = itemView.findViewById(R.id.textViewNombre);
             tvEdad = itemView.findViewById(R.id.textViewEdad);
             imagen = itemView.findViewById(R.id.imageView);
+            itemView.setOnCreateContextMenuListener(this); // asignar el listener del menu contextual
+        }
+
+        @Override
+        public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
+            contextMenu.add(getAdapterPosition(),121,0,"EDITAR");
+            contextMenu.add(getAdapterPosition(),122,1,"BORRAR");
         }
     }
-
 
 }
