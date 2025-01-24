@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResult;
@@ -14,9 +15,6 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -29,6 +27,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Adaptador adaptador;
     TextView tv;
     ActivityResultLauncher<Intent> lanzadorAlta; //definimos en lanzador de la actividad
+    ActivityResultLauncher<Intent> lanzadorEdicion;
+
+    int posicionEdicion; // Para el menú contextual, y modificar ese elemetno en concreto
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         inicializaLista();// Iniciar la lista con unos datos basicos
         vistaRecycler = findViewById(R.id.recyclerView);
-        adaptador = new Adaptador(this, lista,this); // Recibe un contexto y un ArrayList, recibe el paremtro para escuchar el click esperado
+        adaptador = new Adaptador(this, lista, this); // Recibe un contexto y un ArrayList, recibe el paremtro para escuchar el click esperado
         tv = findViewById(R.id.textView);
         vistaRecycler.setLayoutManager(new LinearLayoutManager(this));// Por que tambien puede ser usado para manejar Grids
         vistaRecycler.setAdapter(adaptador);
@@ -48,23 +50,49 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 new ActivityResultCallback<ActivityResult>() {
                     @Override
                     public void onActivityResult(ActivityResult resultado) { // Que hacer con los datos que vuelven de la actividadAlra
-                        if(resultado.getResultCode() == RESULT_OK){
+                        if (resultado.getResultCode() == RESULT_OK) {
                             String nombre = resultado.getData().getStringExtra("NOMBRE");
                             int edad = Integer.parseInt(resultado.getData().getStringExtra("EDAD"));
+                            if (posicionEdicion == -999) {
+                                lista.add(new DatosPersonales(nombre, edad)); // Agregamos los nuevo elementos
+                                adaptador.notifyDataSetChanged(); // Refrescamos el adaptador con la lista actualizada
+                            } else {
 
-                            lista.add(new DatosPersonales(nombre,edad)); // Agregamos los nuevo elementos
-                            adaptador.notifyDataSetChanged(); // Refrescamos el adaptador con la lista actualizada
+                                lista.set(posicionEdicion, new DatosPersonales(nombre, edad)); // Agregamos los nuevo elementos
+                                adaptador.notifyDataSetChanged(); // Refrescamos el adaptador con la lista actualizada
+                            }
+
+                        }else if(resultado.getResultCode() == RESULT_CANCELED) { // Que hacer si el código es cancelado
+
+                            tv.setText("Cancelado");
+                            String nombre = resultado.getData().getStringExtra("NOMBRE");
+                            Toast.makeText(MainActivity.this, "11111"+nombre+"111", Toast.LENGTH_SHORT).show();
 
                         }
                     }
                 });
+        // Que hacer al volver de la actividad
+        /*lanzadorEdicion = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+            @Override
+            public void onActivityResult(ActivityResult resultado) {
+                if(resultado.getResultCode() == RESULT_OK){
+                    String nombre = resultado.getData().getStringExtra("NOMBRE");
+                    int edad = Integer.parseInt(resultado.getData().getStringExtra("EDAD"));
+
+                    lista.set(posicionEdicion,new DatosPersonales(nombre,edad)); // Agregamos los nuevo elementos
+                    adaptador.notifyDataSetChanged(); // Refrescamos el adaptador con la lista actualizada
+
+                }
+
+            }
+        });*/
     }
 
     private void inicializaLista() { // metodo para inicializar lista
-        lista.add(new DatosPersonales("Pepito",23));
-        lista.add(new DatosPersonales("Jorgito",13));
-        lista.add(new DatosPersonales("Juanito",14));
-        lista.add(new DatosPersonales("JAimito",15));
+        lista.add(new DatosPersonales("Pepito", 23));
+        lista.add(new DatosPersonales("Jorgito", 13));
+        lista.add(new DatosPersonales("Juanito", 14));
+        lista.add(new DatosPersonales("JAimito", 15));
     }
 
     @Override
@@ -74,16 +102,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     ////////// CREAR MENU
-    public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menu_pricipal,menu);
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_pricipal, menu);
         return true;
     }
 
     ///// OPCIONES DE MENU
-    public boolean onOptionsItemSelected(MenuItem item){
-        if (item.getItemId()==R.id.item_alta){
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.item_alta) {
             tv.setText("ALTA");
-            lanzadorAlta.launch (new Intent(this, AltaActivity.class));
+            posicionEdicion = -999;
+            lanzadorAlta.launch(new Intent(this, AltaActivity.class));
         }
         return true;
     }
@@ -92,14 +121,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //QUE HACER EN EL CONTEXTUAL
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item) { // Que hacer en el menú contextual
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case 121:
                 tv.setText("BORRAR ");
+
                 lista.remove(item.getGroupId());// optenemos la posicion de la lista y la borra
                 adaptador.notifyDataSetChanged(); // actualizamos la vista
                 return true;
             case 122:
                 tv.setText("EDITAR");
+                posicionEdicion = item.getGroupId(); // para iniciar la global
+                Intent i = new Intent(this, AltaActivity.class);
+                i.putExtra("NOMBRE", lista.get(item.getGroupId()).getNombre()); // Recoger el nombre, atraves del indice de la lista (un objeto)
+                i.putExtra("EDAD", lista.get(item.getGroupId()).getEdad()); // Recoger la edad, atraves del indice de la lista (un objeto)
+                lanzadorAlta.launch(i);
                 return true;
             default:
                 return super.onContextItemSelected(item);

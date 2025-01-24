@@ -71,8 +71,8 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.Micontenedor> impl
 
         @Override
         public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
-            contextMenu.add(getAdapterPosition(),121,0,"EDITAR");
-            contextMenu.add(getAdapterPosition(),122,1,"BORRAR");
+            contextMenu.add(getAdapterPosition(),121,0,"BORRAR");
+            contextMenu.add(getAdapterPosition(),122,1,"EDITAR");
         }
     }
 
