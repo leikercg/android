@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="text"/>
+            android:inputType="text" />
 
     </LinearLayout>
 
@@ -52,6 +52,7 @@
             android:id="@+id/btnInsertar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="clickInsertar"
             android:text="INS" />
 
         <Button
