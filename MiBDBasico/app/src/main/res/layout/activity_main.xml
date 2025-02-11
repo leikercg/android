@@ -59,18 +59,21 @@
             android:id="@+id/btnActualizar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="clickActualizar"
             android:text="ACT" />
 
         <Button
             android:id="@+id/btnEliminar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="clickEliminar"
             android:text="ELIM" />
 
         <Button
             android:id="@+id/btnConsultar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="clickConsultar"
             android:text="CONS" />
 
     </LinearLayout>
