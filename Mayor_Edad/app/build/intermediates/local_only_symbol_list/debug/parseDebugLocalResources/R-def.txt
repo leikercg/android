@@ -1,0 +1,24 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id aceptar
+id edad
+id edad_secondary
+id finalizar
+id main
+id nombre
+id nombre_secodary
+id textView
+id textView2
+layout acivity_secondary
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.Mayor_Edad
+style Theme.Mayor_Edad
+xml backup_rules
+xml data_extraction_rules

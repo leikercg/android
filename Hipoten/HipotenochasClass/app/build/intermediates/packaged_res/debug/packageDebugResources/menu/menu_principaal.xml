@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/itemInstrucciones"
+        android:title="Instruciones" />
+    <item
+        android:id="@+id/itemDificultad"
+        android:title="@string/nivel" />
+    <item
+        android:id="@+id/itemIcono"
+        android:title="Selecionar icono" />
+    <item
+        android:id="@+id/itemNuevoJuego"
+        android:title="Nuevo juego" />
+</menu>

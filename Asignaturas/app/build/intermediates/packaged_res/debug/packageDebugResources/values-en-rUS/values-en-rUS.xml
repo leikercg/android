@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Asignaturas</string>
+    <string name="titulo">SUBJECTS</string>
+    <string name="titulo_aleman">German</string>
+    <string name="titulo_buenosdias">Good mornig</string>
+    <string name="titulo_enviar">Send</string>
+    <string name="titulo_frances">French</string>
+    <string name="titulo_idiomas">Idioms</string>
+    <string name="titulo_ingles">English</string>
+    <string name="titulo_modulos">Moduls</string>
+</resources>

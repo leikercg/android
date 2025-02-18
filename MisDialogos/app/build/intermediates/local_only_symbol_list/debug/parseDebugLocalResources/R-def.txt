@@ -1,0 +1,36 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id btn_confirmar
+id dos_botones
+id edad
+id fecha
+id framento_dos_botones
+id hora
+id idioma
+id idoma_pequeño
+id main
+id mensaje
+id menu_fecha
+id menu_hora
+id nombre
+id personalizado
+id spinner
+id textView
+id textView2
+id tuNombre
+id tv
+layout acivity_secondary
+layout activity_main
+layout dialogo_personalizado
+menu main_menu
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.MisDialogos
+style Theme.MisDialogos
+xml backup_rules
+xml data_extraction_rules

@@ -1,0 +1,35 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable aprobado
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable suspendido
+id buttonConfirmar
+id editTextNombre
+id editTextNota
+id imagen
+id itemAgregar
+id itemEditar
+id itemEliminar
+id itemSalir
+id listView
+id main
+id nombre
+id nota
+id ratingBar
+id textView
+id textView2
+layout activity_main
+layout activity_secondary
+layout layout_item
+menu menu_bar
+menu menu_contextual
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.ListViewEjercicio
+style Theme.ListViewEjercicio
+xml backup_rules
+xml data_extraction_rules

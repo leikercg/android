@@ -1,0 +1,598 @@
+[
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-anydpi-v26_uno_round.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-anydpi-v26/uno_round.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-anydpi-v26_cinco.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-anydpi-v26/cinco.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_uno_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/uno_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_uno_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/uno_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_dos_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/dos_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_uno_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/uno_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/drawable_cuatro_background.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/drawable/cuatro_background.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_uno.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/uno.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_cuatro.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/cuatro.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/xml_backup_rules.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_cuatro_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/cuatro_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_cinco_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/cinco_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_cinco_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/cinco_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-anydpi-v26_seis_round.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-anydpi-v26/seis_round.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_tres_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/tres_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_seis_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/seis_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-anydpi-v26_dos.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-anydpi-v26/dos.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_uno.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/uno.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-anydpi-v26_uno.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-anydpi-v26/uno.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_zero_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/zero_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_dos.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/dos.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_seis.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/seis.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_tres_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/tres_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_cinco.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/cinco.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_cuatro_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/cuatro_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_uno_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/uno_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_dos_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/dos_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_tres_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/tres_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_dos.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/dos.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_seis_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/seis_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_dos_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/dos_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_uno_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/uno_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_cinco_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/cinco_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_dos.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/dos.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_zero.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/zero.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_zero.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/zero.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_uno.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/uno.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_dos.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/dos.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_zero_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/zero_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_seis_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/seis_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-anydpi-v26_seis.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-anydpi-v26/seis.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_cuatro.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/cuatro.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_cuatro_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/cuatro_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_zero_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/zero_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/drawable_cinco_background.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/drawable/cinco_background.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_uno_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/uno_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_tres_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/tres_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_cinco.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/cinco.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_dos_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/dos_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_seis_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/seis_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_tres_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/tres_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_seis_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/seis_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_tres_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/tres_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_zero_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/zero_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_seis.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/seis.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_cinco_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/cinco_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_zero.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/zero.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_cinco_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/cinco_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/drawable_dos_background.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/drawable/dos_background.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_uno_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/uno_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_seis.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/seis.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_tres_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/tres_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_cuatro_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/cuatro_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-anydpi-v26_tres_round.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-anydpi-v26/tres_round.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_cuatro.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/cuatro.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_tres.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/tres.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_cinco_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/cinco_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/layout_activity_main.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_tres.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/tres.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-anydpi-v26_cinco_round.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-anydpi-v26/cinco_round.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_zero_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/zero_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_zero.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/zero.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_zero_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/zero_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_tres_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/tres_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_cuatro_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/cuatro_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_cuatro.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/cuatro.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_seis_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/seis_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_zero.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/zero.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-anydpi-v26_zero_round.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-anydpi-v26/zero_round.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_seis.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/seis.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_cinco_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/cinco_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_uno.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/uno.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_cinco.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/cinco.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_cuatro_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/cuatro_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_dos.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/dos.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_zero_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/zero_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_tres_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/tres_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_cuatro_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/cuatro_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_cinco.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/cinco.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_dos_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/dos_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_cuatro_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/cuatro_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_tres.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/tres.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_dos_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/dos_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-anydpi-v26_zero.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-anydpi-v26/zero.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/layout_final_partida.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/layout/final_partida.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-anydpi-v26_tres.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-anydpi-v26/tres.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_seis_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/seis_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_tres.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/tres.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_zero_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/zero_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_dos_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/dos_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/drawable_uno_background.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/drawable/uno_background.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_zero_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/zero_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_seis_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/seis_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_uno.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/uno.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-anydpi-v26_cuatro.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-anydpi-v26/cuatro.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_cuatro_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/cuatro_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_tres_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/tres_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_cuatro.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/cuatro.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_uno_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/uno_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_dos_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/dos_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xhdpi_cinco_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xhdpi/cinco_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_seis_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/seis_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/drawable_zero_background.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/drawable/zero_background.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_dos_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/dos_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/drawable_tres_background.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/drawable/tres_background.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_cinco_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/cinco_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_cinco_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/cinco_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_zero_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/zero_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_seis_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/seis_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-anydpi-v26_dos_round.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-anydpi-v26/dos_round.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-anydpi-v26_cuatro_round.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-anydpi-v26/cuatro_round.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/drawable_seis_background.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/drawable/seis_background.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_tres.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/tres.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_uno_foreground.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/uno_foreground.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_seis.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/seis.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxhdpi_cuatro_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxhdpi/cuatro_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-mdpi_uno_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-mdpi/uno_round.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_cinco.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/cinco.webp"
+    },
+    {
+        "merged": "com.example.ahorcado.app-debug-31:/mipmap-xxxhdpi_dos_round.webp.flat",
+        "source": "com.example.ahorcado.app-main-33:/mipmap-xxxhdpi/dos_round.webp"
+    }
+]

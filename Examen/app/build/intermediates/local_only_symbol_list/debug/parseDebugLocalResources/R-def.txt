@@ -1,0 +1,32 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id buttonCapicua
+id buttonColores
+id buttonMayor
+id buttonVerCapicua
+id buttonVerMayor
+id editTextNombre1
+id editTextNombre2
+id editTextNumber
+id main
+id textView1
+id textView2
+id textView3
+id textView4
+id textViewEdad1
+id textViewEdad2
+layout activity_main
+layout capicua_activity
+layout colores_activity
+layout mayor_activity
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.Examen
+style Theme.Examen
+xml backup_rules
+xml data_extraction_rules

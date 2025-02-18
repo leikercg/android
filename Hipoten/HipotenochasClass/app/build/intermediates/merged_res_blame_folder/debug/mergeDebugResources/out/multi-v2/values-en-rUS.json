@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.hipotenochasclass.app-mergeDebugResources-30:/values-en-rUS/values-en-rUS.xml",
+            "map": [
+                {
+                    "source": "D:\\MOVILES\\PROYECTOS\\Hipoten\\HipotenochasClass\\app\\src\\main\\res\\values-en-rUS\\strings.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "57,113",
+                        "endColumns": "54,39",
+                        "endOffsets": "107,148"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,110",
+                        "endColumns": "54,39",
+                        "endOffsets": "105,145"
+                    }
+                }
+            ]
+        }
+    ]
+}

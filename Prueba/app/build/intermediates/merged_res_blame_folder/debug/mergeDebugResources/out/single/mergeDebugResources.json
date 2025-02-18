@@ -1,0 +1,198 @@
+[
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-xxxhdpi_sol_foreground.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-xxxhdpi\\sol_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-xhdpi_imagen_fuerte.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-xhdpi\\imagen_fuerte.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-xxhdpi_imagen_fuerte_round.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-xxhdpi\\imagen_fuerte_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-anydpi-v26_imagen_fuerte_round.xml.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-anydpi-v26\\imagen_fuerte_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-xxxhdpi_sol_round.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-xxxhdpi\\sol_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-mdpi_sol.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-mdpi\\sol.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-xhdpi_sol_foreground.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-xhdpi\\sol_foreground.webp"
+    },
+    {
+        "merged": "com.example.prueba.app-debug-31:/layout_activity_main.xml.flat",
+        "source": "com.example.prueba.app-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-anydpi-v26_sol.xml.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-anydpi-v26\\sol.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-xxxhdpi_sol.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-xxxhdpi\\sol.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\drawable_imagen_fuerte_foreground.xml.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\drawable\\imagen_fuerte_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\drawable_avion.xml.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\drawable\\avion.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-xhdpi_sol.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-xhdpi\\sol.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-mdpi_sol_round.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-mdpi\\sol_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-xxhdpi_imagen_fuerte.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-xxhdpi\\imagen_fuerte.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-anydpi-v26_sol_round.xml.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-anydpi-v26\\sol_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-hdpi_sol_round.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-hdpi\\sol_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-xxxhdpi_imagen_fuerte_round.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-xxxhdpi\\imagen_fuerte_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-mdpi_imagen_fuerte.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-mdpi\\imagen_fuerte.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-anydpi-v26_imagen_fuerte.xml.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-anydpi-v26\\imagen_fuerte.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-xxhdpi_sol_round.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-xxhdpi\\sol_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-mdpi_sol_foreground.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-mdpi\\sol_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-xxhdpi_sol.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-xxhdpi\\sol.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-xxxhdpi_imagen_fuerte.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-xxxhdpi\\imagen_fuerte.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-hdpi_sol.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-hdpi\\sol.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-hdpi_sol_foreground.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-hdpi\\sol_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-xhdpi_imagen_fuerte_round.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-xhdpi\\imagen_fuerte_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-xhdpi_sol_round.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-xhdpi\\sol_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-xxhdpi_sol_foreground.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-xxhdpi\\sol_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-mdpi_imagen_fuerte_round.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-mdpi\\imagen_fuerte_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-hdpi_imagen_fuerte.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-hdpi\\imagen_fuerte.webp"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-debug-31:\\mipmap-hdpi_imagen_fuerte_round.webp.flat",
+        "source": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.prueba.app-main-33:\\mipmap-hdpi\\imagen_fuerte_round.webp"
+    }
+]

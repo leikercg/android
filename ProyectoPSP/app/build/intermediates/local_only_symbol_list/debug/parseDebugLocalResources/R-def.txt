@@ -1,0 +1,22 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id editText
+id listView
+id main
+id textViewFecha
+id textViewTemperatura
+id textViewTemperaturaMax
+id textViewTemperaturaMin
+layout activity_main
+layout activity_prediccion
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.ProyectoPSP
+style Theme.ProyectoPSP
+xml backup_rules
+xml data_extraction_rules

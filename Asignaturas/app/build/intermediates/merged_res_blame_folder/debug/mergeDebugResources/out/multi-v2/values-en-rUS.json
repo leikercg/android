@@ -1,0 +1,48 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Alumno\\.gradle\\daemon\\8.7\\com.example.asignaturas.app-mergeDebugResources-29:\\values-en-rUS\\values-en-rUS.xml",
+            "map": [
+                {
+                    "source": "D:\\MOVILES\\PROYECTOS\\Asignaturas\\app\\src\\main\\res\\values-en-rUS\\strings.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,9",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,4",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,403",
+                        "endColumns": "-1,-1,-1,-1,-1,-1,-1,49",
+                        "endOffsets": "-1,-1,-1,-1,-1,-1,-1,448"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,104,148,197,244,294,344,394",
+                        "endColumns": "48,43,48,46,49,49,49,49",
+                        "endOffsets": "99,143,192,239,289,339,389,439"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.example.asignaturas.app-mergeDebugResources-29:/values-en-rUS/values-en-rUS.xml",
+            "map": [
+                {
+                    "source": "D:\\MOVILES\\PROYECTOS\\Asignaturas\\app\\src\\main\\res\\values-en-rUS\\strings.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,10,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,4,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,454,-1,-1,-1,-1,-1",
+                        "endColumns": "-1,-1,-1,57,-1,-1,-1,-1,-1",
+                        "endOffsets": "-1,-1,-1,507,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,104,148,197,255,302,352,402,452",
+                        "endColumns": "48,43,48,57,46,49,49,49,49",
+                        "endOffsets": "99,143,192,250,297,347,397,447,497"
+                    }
+                }
+            ]
+        }
+    ]
+}

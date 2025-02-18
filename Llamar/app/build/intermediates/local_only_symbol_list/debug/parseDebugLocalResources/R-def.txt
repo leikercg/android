@@ -1,0 +1,33 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable colgar_background
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable llamar_background
+drawable walter_white_background
+drawable walter_white_sombrero_background
+id boton
+id imagen
+id main
+layout activity_main
+mipmap colgar
+mipmap colgar_foreground
+mipmap colgar_round
+mipmap ic_launcher
+mipmap ic_launcher_round
+mipmap llamar
+mipmap llamar_foreground
+mipmap llamar_round
+mipmap walter_white
+mipmap walter_white_foreground
+mipmap walter_white_round
+mipmap walter_white_sombrero
+mipmap walter_white_sombrero_foreground
+mipmap walter_white_sombrero_round
+string app_name
+style Base.Theme.Llamar
+style Theme.Llamar
+xml backup_rules
+xml data_extraction_rules
