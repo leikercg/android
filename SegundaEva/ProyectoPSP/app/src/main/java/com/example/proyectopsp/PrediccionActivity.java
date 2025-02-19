@@ -1,18 +1,18 @@
 package com.example.proyectopsp;
 
-import android.content.Intent;
+import android.content.ContentValues;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,20 +21,24 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLEncoder;
 import java.util.ArrayList;
-import java.util.List;
 
 public class PrediccionActivity extends AppCompatActivity {
 
-    TextView textViewTemperatura, textViewTemperaturaMin, textViewTemperaturaMax,textViewFecha;
-    final String API_KEY = "qZMYJVlhIy75nLfS";
-    final String BASE_URL = "https://my.meteoblue.com/packages/basic-1h_basic-day_current";
+    TextView textViewTemperatura, textViewTemperaturaMin, textViewTemperaturaMax, textViewFecha, textViewCiudad;
+    Button btnGuardarCiudad;
+    ListView listViewHoras; // para mostrar la información horaria
+    String API_KEY = "qZMYJVlhIy75nLfS";
+    DatabaseHelper dbHelper;
+    double latitud, longitud;
+    String nombreCiudad;
+    boolean estaGuardada, esDia, esNublado;
+    ImageView foto;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,76 +46,167 @@ public class PrediccionActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_prediccion);
 
-        textViewTemperatura= findViewById(R.id.textViewTemperatura);
-        textViewTemperaturaMin= findViewById(R.id.textViewTemperaturaMin);
-        textViewTemperaturaMax= findViewById(R.id.textViewTemperaturaMax);
-        textViewFecha= findViewById(R.id.textViewFecha);
+        // inicializar vistas
+        textViewTemperatura = findViewById(R.id.textViewTemperatura);
+        textViewTemperaturaMin = findViewById(R.id.textViewTemperaturaMin);
+        textViewTemperaturaMax = findViewById(R.id.textViewTemperaturaMax);
+        textViewCiudad = findViewById(R.id.textViewCiudad);
+        textViewFecha = findViewById(R.id.textViewFecha);
+        btnGuardarCiudad = findViewById(R.id.btnGuardarCiudad);
+        listViewHoras = findViewById(R.id.listViewHoras);
+        foto = findViewById(R.id.imageViewFoto);
 
-        double latitud = getIntent().getDoubleExtra("LATITUD", 0.0);
-        double longitud = getIntent().getDoubleExtra("LONGITUD", 0.0);
+        // incializar helper
+        dbHelper = new DatabaseHelper(this);
 
-        new ObtenerClimaTask().execute(latitud, longitud);
+        // obtener datos de la actividad anterior
+        latitud = getIntent().getDoubleExtra("LATITUD", 0.0);
+        longitud = getIntent().getDoubleExtra("LONGITUD", 0.0);
+        nombreCiudad = getIntent().getStringExtra("CIUDAD");
+        String datosClima = getIntent().getStringExtra("DATOS_CLIMA");
+
+        textViewCiudad.setText(nombreCiudad);
+        estaGuardada = comprobarBaseDatos(nombreCiudad);
+        actualizarBoton();
+
+        if (datosClima != null) {
+            try {
+                JSONObject jsonObject = new JSONObject(datosClima);
+                mostrarDatosClima(jsonObject);
+            } catch (Exception e) {
+                Log.e("Error", "JSON NULLLLLLLL", e);
+            }
+        }
     }
 
-    class ObtenerClimaTask extends AsyncTask<Double, Void, String[]> {
-        @Override
-        protected String[] doInBackground(Double... coords) {
-            if (coords.length < 2) {
-                return null;
-            }
+    public void mostrarDatosClima(JSONObject jsonObject) {
+        try {
+            JSONObject dataCurrent = jsonObject.getJSONObject("data_current");
+            JSONObject dataDay = jsonObject.getJSONObject("data_day");
 
-            double lat = coords[0];
-            double lon = coords[1];
-
-            try {
-                String urlString = "https://my.meteoblue.com/packages/basic-1h_basic-day_current?apikey=qZMYJVlhIy75nLfS"
-                        + "&lat=" + lat + "&lon=" + lon + "&format=json";
-                URL url = new URL(urlString);
-
-                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                connection.setRequestMethod("GET");
-                connection.connect();
-
-                InputStream in = connection.getInputStream();
-                BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-                StringBuilder buffer = new StringBuilder();
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    buffer.append(line);
-                }
-
-                JSONObject jsonObject = new JSONObject(buffer.toString());
-
-                // Obtener temperatura actual
-                String temperaturaActual = jsonObject.getJSONObject("data_current").getString("temperature");
-
-                // Obtener temperatura mínima y máxima del día actual
-                JSONArray fechas = jsonObject.getJSONObject("data_day").getJSONArray("time");
-                JSONArray tempMinArray = jsonObject.getJSONObject("data_day").getJSONArray("temperature_min");
-                JSONArray tempMaxArray = jsonObject.getJSONObject("data_day").getJSONArray("temperature_max");
-
-                String temperaturaMin = tempMinArray.getString(0); // Día actual (índice 0)
-                String temperaturaMax = tempMaxArray.getString(0); // Día actual (índice 0)
-                String fechaActual = fechas.getString(0); // Día actual (índice 0)
-
-                return new String[]{temperaturaActual, temperaturaMin, temperaturaMax, fechaActual};
-
-            } catch (Exception e) {
-                Log.e("API_ERROR", "Error en la consulta de clima", e);
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(String[] temperaturas) {
-            if (temperaturas != null) {
-                textViewTemperatura.setText("Temperatura actual: " + temperaturas[0] + "°C");
-                textViewTemperaturaMin.setText("Temperatura mínima: " + temperaturas[1] + "°C");
-                textViewTemperaturaMax.setText("Temperatura máxima: " + temperaturas[2] + "°C");
-                textViewFecha.setText("Fecha: " + temperaturas[3]);
+            //la temperatura actual
+            String temperaturaActual = dataCurrent.optString("temperature", "xx");
+            if (temperaturaActual.length() >= 4) {
+                textViewTemperatura.setText("Tº: " + temperaturaActual.substring(0, 4) + "°C");
             } else {
-                textViewTemperatura.setText("Error obteniendo la temperatura");
+                textViewTemperatura.setText("Tº: " + temperaturaActual + "°C");
             }
+
+            // fechas y temperaturas
+            JSONArray fechas = dataDay.getJSONArray("time");
+            JSONArray tempMinArray = dataDay.getJSONArray("temperature_min");
+            JSONArray tempMaxArray = dataDay.getJSONArray("temperature_max");
+
+            textViewTemperaturaMin.setText("Tº Min: " + tempMinArray.getString(0) + "°C");
+            textViewTemperaturaMax.setText("Tº Max: " + tempMaxArray.getString(0) + "°C");
+            textViewFecha.setText("Fecha: " + fechas.getString(0));
+
+
+
+            // Crear objetos JSON en función a lo devuelto
+            JSONObject data1h = jsonObject.getJSONObject("data_1h");
+            JSONArray tiempos = data1h.getJSONArray("time");
+            JSONArray temperaturas = data1h.getJSONArray("temperature");
+            JSONArray precProbabilidad = data1h.getJSONArray("precipitation_probability");
+            JSONArray totalNubes = data1h.getJSONArray("totalcloudcover");
+
+            // Obtener la hora actual
+            java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("HH");
+            String horaActual = sdf.format(new java.util.Date());
+
+            // El índice de la hora actual
+            int indiceHoraActual = 0;
+            for (int i = 0; i < tiempos.length(); i++) {
+                String horaTiempos = tiempos.getString(i).substring(11, 13); // recoger solo HH
+                if (horaTiempos.equals(horaActual)) {
+                    indiceHoraActual = i;
+                    break;
+                } else if (horaTiempos.compareTo(horaActual) > 0) {
+                    indiceHoraActual = Math.max(0, i - 1); // cogemos la hora pasada
+                    break;
+                }
+            }
+
+            // comprobar nubes y luz
+            int isDaylight = dataCurrent.optInt("isdaylight", 1);
+            esDia = isDaylight == 1;
+            int nubes = totalNubes.getInt(indiceHoraActual);
+            esNublado = nubes >= 70;
+
+            // tiempo por horas
+            ArrayList<String> listaHoras = new ArrayList<>();
+            for (int i = 0; i < tiempos.length(); i++) {
+                String horaFormateada = tiempos.getString(i).substring(11, 16);
+                double temp = temperaturas.getDouble(i);
+                int probLluvia = precProbabilidad.getInt(i);
+                String item = horaFormateada + " - Temp: " + temp + "°C - Prob. lluvia: " + probLluvia + "%";
+                listaHoras.add(item);
+            }
+
+            // actualizar el ListView
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(PrediccionActivity.this,
+                    android.R.layout.simple_list_item_1, listaHoras);
+            listViewHoras.setAdapter(adapter);
+
+            // mostrar imagen según el clima
+            if (esDia) {
+                if (esNublado) {
+                    foto.setImageResource(R.drawable.dia_nublado);
+                } else {
+                    foto.setImageResource(R.drawable.dia_soleado);
+                }
+            } else {
+               if (esNublado) {
+                   foto.setImageResource(R.drawable.noche_nublada);
+               } else {
+                   foto.setImageResource(R.drawable.noche_despejada);
+               }
+            }
+
+        } catch (Exception e) {
+            Log.e("API", "Error", e);
+        }
+    }
+
+    public void clickGuardarCiudad(View view) {
+        if (estaGuardada) {
+            eliminarCiudad(nombreCiudad);
+            btnGuardarCiudad.setText("Guardar ciudad");
+        } else {
+            guardarCiudad(nombreCiudad, latitud, longitud);
+            btnGuardarCiudad.setText("Eliminar ciudad");
+        }
+        estaGuardada = !estaGuardada;
+        actualizarBoton();
+    }
+
+    private boolean comprobarBaseDatos(String ciudad) {
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        Cursor cursor = db.query("ciudades", new String[]{"nombre"}, "nombre = ?", new String[]{ciudad}, null, null, null);
+        boolean exists = cursor.getCount() > 0;
+        cursor.close();
+        return exists;
+    }
+
+    private void guardarCiudad(String ciudad, double lat, double lon) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("nombre", ciudad);
+        values.put("latitud", lat);
+        values.put("longitud", lon);
+        db.insert("ciudades", null, values);
+    }
+
+    private void eliminarCiudad(String ciudad) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db.delete("ciudades", "nombre = ?", new String[]{ciudad});
+    }
+
+    public void actualizarBoton() {
+        if (estaGuardada){
+            btnGuardarCiudad.setText("Eliminar ciudad");
+        }else{
+            btnGuardarCiudad.setText("Guardar ciudad");
         }
     }
 

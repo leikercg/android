@@ -1,6 +1,8 @@
 package com.example.proyectopsp;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,9 +11,9 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,16 +32,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    DatabaseHelper dbHelper;
+    ListView listViewGuardadas;
+    ArrayAdapter<String> adapterGuardadas;
+    List<String> ciudadesGuardadas = new ArrayList<>();
 
     ListView listView;
     EditText editText;
-    Handler handler = new Handler(Looper.getMainLooper()); // Para manejar el retraso
-    Runnable workRunnable; // Hilo de trabajo para el retraso
-    static final String API_KEY = "qZMYJVlhIy75nLfS";
-    static final String BASE_URL = "https://www.meteoblue.com/en/server/search/query3";
+    Handler handler = new Handler(Looper.getMainLooper()); // para manejar el retraso
+    Runnable workRunnable; // hilo de trabajo para el retraso
+    String API_KEY = "qZMYJVlhIy75nLfS";
+    String BASE_URL = "https://www.meteoblue.com/en/server/search/query3";
 
-    // Lista para almacenar latitud y longitud de las ciudades
-    private final List<Double[]> coordenadasList = new ArrayList<>();
+    // lista para almacenar latitud y longitud de las ciudades
+    List<Double[]> listaCoordenadas = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,54 +55,93 @@ public class MainActivity extends AppCompatActivity {
 
         editText = findViewById(R.id.editText);
         listView = findViewById(R.id.listView);
+        listViewGuardadas = findViewById(R.id.listViewGuardadas);
+        dbHelper = new DatabaseHelper(this); // parea manejar la base de datos
 
-        editText.addTextChangedListener(new TextWatcher() { // Usado para detectar cambios en el texto, implementa 3 métodos
+        cargarCiudadesGuardadas();
+
+        editText.addTextChangedListener(new TextWatcher() { // usado para detectar cambios en el texto, implementa 3 métodos
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) { // Que hacer cuando está cambiando el texto
+            public void onTextChanged(CharSequence s, int start, int before, int count) { // que hacer cuando está cambiando el texto
                 if (workRunnable != null) {
-                    handler.removeCallbacks(workRunnable); // Cancelar la búsqueda
+                    handler.removeCallbacks(workRunnable); // cancelar la búsqueda
                 }
             }
 
             @Override
-            public void afterTextChanged(final Editable editable) { // Qué hacer cuando termina de escribir
+            public void afterTextChanged(final Editable editable) { // que hacer cuando termina de escribir
                 workRunnable = () -> {
-                    String query = editable.toString().trim();
-                    if (!query.isEmpty()) {
-                        buscarCiudades(query); // Realizar la búsqueda
+                    String busqueda = editable.toString().trim();
+                    if (!busqueda.isEmpty()) {
+                        buscarCiudades(busqueda); // Realizar la búsqueda
                     }
                 };
-                handler.postDelayed(workRunnable, 1000); // Retraso de 1 segundo, para evitar consultas innecesarias
+                handler.postDelayed(workRunnable, 1000); // retraso de 1 segundo, para evitar consultas innecesarias
             }
         });
 
-        // Agregar listener para capturar la ciudad seleccionada en el ListView
+        // agregar listener para capturar la ciudad seleccionada en el ListView
         listView.setOnItemClickListener((parent, view, position, id) -> {
-            Double[] coordenadas = coordenadasList.get(position); // Obtener latitud y longitud de la ciudad seleccionada
+            Double[] coordenadas = listaCoordenadas.get(position); // obtener latitud y longitud de la ciudad seleccionada
             double latitud = coordenadas[0];
             double longitud = coordenadas[1];
 
-            Intent intent = new Intent(MainActivity.this, PrediccionActivity.class);
-            intent.putExtra("LATITUD", latitud);
-            intent.putExtra("LONGITUD", longitud);
-            startActivity(intent);
-            // Aquí puedes usar las coordenadas para hacer una consulta meteorológica
-            Log.d("COORDENADAS", "Latitud: " + latitud + ", Longitud: " + longitud);
+            String ciudadSeleccionada = (String) parent.getItemAtPosition(position);
+
+            // consultae la api de geografia
+            new ObtenerClimaSegundoPlano(latitud, longitud, ciudadSeleccionada).execute();
+        });
+
+        listViewGuardadas.setOnItemClickListener((parent, view, position, id) -> { // lista de ciudades guardadas
+            String ciudadSeleccionada = ciudadesGuardadas.get(position);
+            Cursor cursor = dbHelper.getReadableDatabase().rawQuery(
+                    "SELECT latitud, longitud FROM ciudades WHERE nombre = ?", new String[]{ciudadSeleccionada});
+            if (cursor.moveToFirst()) {
+                double latitud = cursor.getDouble(0);
+                double longitud = cursor.getDouble(1);
+                // consultar api
+                new ObtenerClimaSegundoPlano(latitud, longitud, ciudadSeleccionada).execute();
+            }
+            cursor.close();
         });
     }
+    public void cargarCiudadesGuardadas() { // metodo para cargar las ciudades guardadas en la base de datos
+        ciudadesGuardadas.clear(); // limpiar la lista antes de recargar
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select nombre from ciudades", null);
 
-    public void buscarCiudades(String query) { // Crea una nueva tarea en segundo plano para realizar la búsqueda
-        new BuscarCiudadesTask().execute(query);
+        while (cursor.moveToNext()) {
+            ciudadesGuardadas.add(cursor.getString(0));
+        }
+        cursor.close();
+
+        if (adapterGuardadas == null) { // si el adaptador aun no está inicializado
+            adapterGuardadas = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, ciudadesGuardadas);
+            listViewGuardadas.setAdapter(adapterGuardadas);
+        } else {
+            adapterGuardadas.notifyDataSetChanged(); // si el adaptador ya esat inicializado se actualiza
+        }
     }
 
-    class BuscarCiudadesTask extends AsyncTask<String, Void, List<String>> { // Tarea en segundo plano
+    @Override
+    protected void onResume() {// se ejecuta cada vez que se regresa a la pantalla main
+        super.onResume();
+        cargarCiudadesGuardadas();
+    }
+    
+    public void buscarCiudades(String query) { // crea una nueva tarea en segundo plano para realizar la búsqueda
+        new buscarCiudadesTask().execute(query);
+    }
+
+    // valor que recibe doInBackground desde el execute, valor recibe onProgressUodate desde publishProgress, valor que recibe onPostExecute desde doInBackground
+    class buscarCiudadesTask extends AsyncTask<String, Void, List<String>> { // Tarea en segundo plano
         @Override
-        protected List<String> doInBackground(String... texto) { // Método que se ejecuta en segundo plano
+        protected List<String> doInBackground(String... texto) { // metodo que se ejecuta en segundo plano
             String query = texto[0];
-            List<String> ciudadesList = new ArrayList<>(); // Para guardar las ciudades
+            List<String> ciudadesList = new ArrayList<>(); // para guardar las ciudades
 
             HttpURLConnection connection = null;
             BufferedReader reader = null;
@@ -112,11 +157,11 @@ public class MainActivity extends AppCompatActivity {
 
                 int responseCode = connection.getResponseCode();
                 if (responseCode != HttpURLConnection.HTTP_OK) {
-                    Log.e("API_ERROR", "Error en la respuesta HTTP: " + responseCode);
+                    Log.e("API", "Error: " + responseCode);
                     return ciudadesList;
                 }
 
-                // Leer la respuesta JSON
+                // leer la respuesta JSON
                 InputStream in = connection.getInputStream();
                 reader = new BufferedReader(new InputStreamReader(in));
                 StringBuilder buffer = new StringBuilder();
@@ -125,37 +170,37 @@ public class MainActivity extends AppCompatActivity {
                     buffer.append(line);
                 }
 
-                // Convertir la respuesta JSON a un objeto JSON
+                // convertir la respuesta JSON a un objeto JSON
                 JSONObject jsonObject = new JSONObject(buffer.toString());
                 if (jsonObject.has("results")) {
                     JSONArray jsonArray = jsonObject.getJSONArray("results");
 
-                    // Limpiar la lista de coordenadas antes de agregar nuevas
-                    coordenadasList.clear();
+                    // limpiar la lista de coordenadas antes de agregar nuevas
+                    listaCoordenadas.clear();
 
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonCiudad = jsonArray.getJSONObject(i);
-                        String nombre = jsonCiudad.optString("name", "Desconocido");
-                        String pais = jsonCiudad.optString("country", "N/A");
-                        String comunidad = jsonCiudad.optString("admin1", "Desconocido");
+                        String nombre = jsonCiudad.optString("name", "xx");
+                        String pais = jsonCiudad.optString("country", "xx");
+                        String comunidad = jsonCiudad.optString("admin1", "xx");
 
-                        // Obtener latitud y longitud
+                        // obtener latitud y longitud
                         double latitud = jsonCiudad.optDouble("lat", 0.0);
                         double longitud = jsonCiudad.optDouble("lon", 0.0);
 
-                        // Guardar coordenadas en la lista
-                        coordenadasList.add(new Double[]{latitud, longitud});
+                        // guardar coordenadas en la lista
+                        listaCoordenadas.add(new Double[]{latitud, longitud});
 
                         // Solo mostrar el nombre, país y comunidad en el ListView
                         String infoFinal = nombre + ", " + pais + ", " + comunidad;
                         ciudadesList.add(infoFinal);
                     }
                 } else {
-                    Log.d("API_RESPONSE", "Respuesta JSON sin 'results': " + buffer.toString());
+                    Log.d(" API", "Sin resultados': " + buffer.toString());
                 }
 
             } catch (Exception e) {
-                Log.e("API_ERROR", "Error en la conexión o JSON", e);
+                Log.e("API", "Error", e);
             } finally {
                 if (connection != null) {
                     connection.disconnect();
@@ -164,11 +209,11 @@ public class MainActivity extends AppCompatActivity {
                     try {
                         reader.close();
                     } catch (IOException e) {
-                        Log.e("API_ERROR", "Error cerrando el lector", e);
+                        Log.e("API", "Error", e);
                     }
                 }
             }
-            // Devolver la lista de ciudades
+            // devolver la lista de ciudades
             return ciudadesList;
         }
 
@@ -177,14 +222,70 @@ public class MainActivity extends AppCompatActivity {
             if (result != null && !result.isEmpty()) {
                 actualizarListView(result);
             } else {
-                Log.e("API_ERROR", "No se obtuvo respuesta o no se encontraron ciudades.");
+                Log.e("API", "Sin resultadoss");
             }
         }
     }
 
-    private void actualizarListView(List<String> ciudades) {
+    public void actualizarListView(List<String> ciudades) {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, ciudades);
         listView.setAdapter(adapter);
+    }
+
+    class ObtenerClimaSegundoPlano extends AsyncTask<Void, Void, JSONObject> {
+        double latitud;
+        double longitud;
+        String ciudadSeleccionada;
+
+        public ObtenerClimaSegundoPlano(double latitud, double longitud, String ciudadSeleccionada) {
+            this.latitud = latitud;
+            this.longitud = longitud;
+            this.ciudadSeleccionada = ciudadSeleccionada;
+        }
+
+        @Override
+        protected JSONObject doInBackground(Void... voids) {
+            try {
+                String urlString = "https://my.meteoblue.com/packages/basic-1h_basic-day_current_clouds-1h?apikey=" + API_KEY +
+                        "&lat=" + latitud + "&lon=" + longitud + "&format=json&tz=GMT&forecast_days=1";
+                URL url = new URL(urlString);
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestMethod("GET");
+                connection.connect();
+
+                // convertir el buffer en objeto JSON
+                InputStream in = connection.getInputStream();
+                BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+                StringBuilder buffer = new StringBuilder();
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    buffer.append(line);
+                }
+                return new JSONObject(buffer.toString()); // devolver el JSON
+
+            } catch (Exception e) {
+                Log.e("API", "Error", e);
+                return null;
+            }
+        }
+
+        @Override
+        protected void onPostExecute(JSONObject jsonObject) {
+
+            if (jsonObject != null) {
+                // preparar ek intent y enviarlo
+                Intent intent = new Intent(MainActivity.this, PrediccionActivity.class);
+                intent.putExtra("LATITUD", latitud);
+                intent.putExtra("LONGITUD", longitud);
+                intent.putExtra("CIUDAD", ciudadSeleccionada);
+                intent.putExtra("DATOS_CLIMA", jsonObject.toString()); // solo se puede pasar como string
+
+
+                startActivity(intent);
+            } else {
+                Toast.makeText(MainActivity.this, "VALOR NULLLLLLL", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }
