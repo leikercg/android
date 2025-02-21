@@ -1,40 +1,50 @@
 package com.example.setpreferencesactivity;
 
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+public class MainActivity extends Activity {
 
-public class MainActivity extends AppCompatActivity {
+    private Button btnPreferencias;
+    private Button btnObtenerPreferencias;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-    }
-    public void clickGuardar1(View v) {
-        Intent i = new Intent(this, Opcionesctivity.class);
-        startActivity(i);
-    }
-    public void clickObtener(View v) {
-        SharedPreferences preferencias = PreferenceManager.getDefaultSharedPreferences(this);
-        boolean preferencia1 = preferencias.getBoolean("opcion1", false);
-        String preferencia2 = preferencias.getString("opcion2", "");
-        String preferencia3 = preferencias.getString("opcion3", "");
+        btnPreferencias = (Button) findViewById(R.id.BtnPreferencias);
+        btnObtenerPreferencias = (Button) findViewById(R.id.BtnObtenerPreferencias);
 
-        Log.i("Preferencias", "Preferencia 1: " + preferencia1);
-        Log.i("Preferencias", "Preferencia 2: " + preferencia2);
-        Log.i("Preferencias", "Preferencia 3: " + preferencia3);
+        btnPreferencias.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,
+                        OpcionesActivity.class));
+            }
+        });
 
+        btnObtenerPreferencias.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences pref =
+                        PreferenceManager.getDefaultSharedPreferences(
+                                MainActivity.this);
+
+                Log.i("", "Opción 1: " + pref.getBoolean("opcion1", false));
+                Log.i("", "Opción 2: " + pref.getString("opcion2", ""));
+                Log.i("", "Opción 3: " + pref.getString("opcion3", ""));
+            }
+        });
     }
+
+
 }
