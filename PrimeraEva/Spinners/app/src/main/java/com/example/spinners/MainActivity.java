@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-
+                Toast.makeText(MainActivity.this, "nada seleccionado", Toast.LENGTH_SHORT).show();
             }
         });
 
