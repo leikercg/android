@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                         buscarCiudades(busqueda); // Realizar la búsqueda
                     }
                 };
-                handler.postDelayed(workRunnable, 1000); // retraso de 1 segundo, para evitar consultas innecesarias
+                handler.postDelayed(workRunnable, 400); // retraso de 1 segundo, para evitar consultas innecesarias
             }
         });
 

@@ -30,11 +30,12 @@ public class FragmentoFecha extends DialogFragment implements DatePickerDialog.O
 
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) { //Crea la pantalla que se muestra
         Calendar calendar = Calendar.getInstance();
+        // Para establecer la fecha del picker
         int year = calendar.get(Calendar.YEAR);
         int month = calendar.get(Calendar.MONTH); // Los meses van de 0 (enero) a 11 (diciembre)
         int day = calendar.get(Calendar.DAY_OF_MONTH);
 
-        DatePickerDialog capturaFecha = new DatePickerDialog(getActivity(),this::onDateSet,year,month,day); // indicar el establecedor de fechas
+        DatePickerDialog capturaFecha = new DatePickerDialog(getActivity(),this::onDateSet,year,month,day); // indicar el establecedor de fechas, con la fecha indicada
         return capturaFecha;
     }
 
@@ -44,7 +45,7 @@ public class FragmentoFecha extends DialogFragment implements DatePickerDialog.O
         fecha.pasarFecha(i,i1,i2);
     }
 
-    public interface Fecha{
-        public void pasarFecha(int año,int mes, int dia);
+    public interface Fecha{ // Interfaz para pasar los datos
+        public void pasarFecha(int año,int mes, int dia); // Metodo para pasar los datos
     }
 }

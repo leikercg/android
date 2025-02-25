@@ -12,17 +12,35 @@ import androidx.fragment.app.DialogFragment;
 public class Fragmento2Botones extends DialogFragment {
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
-        AlertDialog.Builder ventana= new AlertDialog.Builder(getActivity());
+        AlertDialog.Builder ventana = new AlertDialog.Builder(getActivity());
         ventana.setTitle("DIÁLOGO CON FRAGMENTO");
         ventana.setMessage("Diálogo que utiliza un fragmento");
-        // TODO: 29/10/2024   Poner ícono
         ventana.setIcon(R.drawable.ic_launcher_foreground);
-        ventana.setNegativeButton("SÍ", new DialogInterface.OnClickListener() {
+
+        // Botón "SÍ"
+        ventana.setPositiveButton("SÍ", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Toast.makeText(getActivity(), "Mensaje desde fragmento", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Presionaste SÍ", Toast.LENGTH_SHORT).show();
             }
         });
+
+        // Botón "NO"
+        ventana.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(getActivity(), "Presionaste NO", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Botón "CANCELAR" (opcional)
+        ventana.setNeutralButton("CANCELAR", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(getActivity(), "Diálogo cancelado", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         return ventana.create();
     }
 }

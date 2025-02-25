@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Abrimos la base de datos 'DBUsuarios' en modo escritura
-        usdbh = new BDHelper(this, "DBUsuarios", null, 6);
-        //dbw = usdbh.getWritableDatabase(); // No ayadimos datos solo para pruebas
+        usdbh = new BDHelper(this, "DBUsuarios", null, 8); // Esto solo crea el objeto
+        //dbw = usdbh.getWritableDatabase(); // No ayadimos datos solo para pruebas // hay que intentar acceder para que se ejecuten los metodos oncreate o ondate
 
         //Si hemos abierto correctamente la base de datos
         if (dbw != null) {

@@ -48,18 +48,6 @@ public class MainActivity extends AppCompatActivity implements DialogoSeleccion.
 
 
 
-    ////Mostrar el menú
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        MenuInflater menuInflater = getMenuInflater();
-
-        menuInflater.inflate(R.menu.main_menu, menu);
-
-        return true;
-
-        //getMenuInflater().inflate(R.menu.activity_main, menu);
-        //return true; esto es del PDF
-    }
 
     // Selección
     public boolean onOptionsItemSelected(MenuItem item) { // Dar funcionalidad a los items del menu
@@ -198,5 +186,6 @@ public class MainActivity extends AppCompatActivity implements DialogoSeleccion.
         tv.setText(data.getStringExtra("NOMBRE"));// Recoger los datos del edit text
         tv.append(data.getStringExtra("NOMBRELISTA"));
     }*/
+
 
 }

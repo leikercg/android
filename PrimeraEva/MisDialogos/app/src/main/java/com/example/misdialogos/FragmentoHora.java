@@ -18,7 +18,7 @@ public class FragmentoHora extends DialogFragment implements TimePickerDialog.On
     Hora hora;
     public void onAttach(@NonNull Context context) { // esto adjunta la hora a la interface
         super.onAttach(context);
-        hora=(Hora) getActivity();
+        hora=(Hora) getActivity(); // significa que la actividad que usa este fragmento debe implementar la interfaz hora
     }
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {

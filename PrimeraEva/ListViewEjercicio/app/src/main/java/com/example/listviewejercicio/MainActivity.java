@@ -105,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /*@@@@@@@@@@@@@@@@@@@@ DEFINIMOS EL CONTENEDOR @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
     static class ViewHolder {
         // declaro los elementos del contenedor para poder modificarlos en el adaptador
         TextView nombre;

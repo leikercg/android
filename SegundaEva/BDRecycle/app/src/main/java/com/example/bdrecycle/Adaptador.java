@@ -26,11 +26,12 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.Micontenedor> impl
     }
 
     @NonNull
-    @Override // Metodo abstracto de Reciclerview.Adaptador
+    @Override // Metodo abstracto de Reciclerview.Adaptador, crea objetos de tipo Micontenedor
     public Micontenedor onCreateViewHolder(@NonNull ViewGroup parent, int viewType) { // Crea el contenedor
 
         // Convertir el XML del layout del item en una vista
         LayoutInflater inflador = (LayoutInflater) contexto.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        //
         View vItem = inflador.inflate(R.layout.item_layout, parent, false);
 
         // Asigna el listener a cada item para detectar clics en la lista

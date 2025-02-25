@@ -1,6 +1,7 @@
 package com.example.sorpresa;
 
 public class Estacion {
+    int id;
     String nombre;
     String cordillera;
     int n_remontes;
@@ -9,8 +10,8 @@ public class Estacion {
     float valoracion;
     String notas;
 
-    public Estacion(String nombre, String cordillera, int n_remontes, float km_pistas, long fecha_ult_visita, float valoracion, String notas) {
-
+    public Estacion(int id, String nombre, String cordillera, int n_remontes, float km_pistas, long fecha_ult_visita, float valoracion, String notas) {
+        this.id = id;
         this.nombre = nombre;
         this.cordillera= cordillera;
         this.n_remontes = n_remontes;
@@ -18,6 +19,14 @@ public class Estacion {
         this.fecha_ult_visita = fecha_ult_visita;
         this.valoracion = valoracion;
         this.notas = notas;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public long getFecha_ult_visita() {

@@ -33,6 +33,7 @@ public class FragmentoPersonalizado extends DialogFragment {
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder ventana = new AlertDialog.Builder(getActivity());
 
+        // Para asociar el layout personalizado con el fragmento
         LayoutInflater inflador = getActivity().getLayoutInflater();
         View vistaVentana = inflador.inflate(R.layout.dialogo_personalizado, null);//  Creamos la vista con el inflador y el XML
         ventana.setView(vistaVentana); //La vista se crea apartir de XML usando el inflador, establecemos una vista
@@ -68,7 +69,7 @@ public class FragmentoPersonalizado extends DialogFragment {
 
     public interface DatoEdad {
 
-        void pasarDatosEdad(int edad);
+        public void pasarDatosEdad(int edad);
     }
 
     public interface DatoNombre {

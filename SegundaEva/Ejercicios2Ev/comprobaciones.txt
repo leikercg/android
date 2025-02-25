@@ -1,0 +1,7 @@
+1. Crear base de datos y su clase
+2. Tener datos en la base de datos
+3. Crear la clase especial
+4. Recuperar datos y rellenar el array
+5. Crear la clase adaptador y viewHolder
+6. Encontrar el list view, iniciar al adaptadorLibros
+7. Emparejar el listview con el adaptador
