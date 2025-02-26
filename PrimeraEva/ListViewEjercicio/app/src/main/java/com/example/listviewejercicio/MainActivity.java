@@ -115,7 +115,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     /// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ LANZAMOS EL MENU DE BARRA @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -183,6 +182,17 @@ public class MainActivity extends AppCompatActivity {
 
         //menu.setHeaderTitle((AdaptadorTitulares) listaOpciones.getAdapter().getItem(informacionItem.position).toString());
         inflador.inflate(R.menu.menu_contextual, menu);
+
+
+        //en caso de dos menus //
+        /*if (v.getId() == R.id.listView1) {
+        // Si el ListView1 disparó el evento, inflamos el primer menú contextual
+        getMenuInflater().inflate(R.menu.menu_contextual1, menu);
+        } else if (v.getId() == R.id.listView2) {
+        // Si el ListView2 disparó el evento, inflamos el segundo menú contextual
+        getMenuInflater().inflate(R.menu.menu_contextual2, menu);
+         }
+        * */
     }
 
     //////////////////////////////// INDICAMOS QUE HACER EN CASO DE QUE SE SELECCIONE CADA ELEMENTO

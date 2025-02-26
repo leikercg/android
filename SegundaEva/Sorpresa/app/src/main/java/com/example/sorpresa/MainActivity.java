@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int posicion, long id) { // Con interfaz para más claridad
+    public void onItemClick(AdapterView<?> adapterView, View view, int posicion, long id) { // Con interfaz para más claridad AdapterView.OnItemClickListener
         //Se recibe el adaptador, la vista y el elemento que se ha clicado
 
         //Alternativa 1: Adaptador y posicion

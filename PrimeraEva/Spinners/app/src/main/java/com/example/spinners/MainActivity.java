@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Adaptador en JAVA
+
         String[] datos = new String[]{"Elem1", "Elem2", "Elem3", "Elem4", "Elem5"};
         ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, datos);
         lista.setAdapter(adaptador);

@@ -1,5 +1,6 @@
 package com.example.sorpresa;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -138,8 +139,23 @@ public class SecondaryActivity extends AppCompatActivity implements FragmentoFec
 
             i.putExtra("FECHA", milisegundos);
 
-            setResult(RESULT_OK, i);
-            finish();
+            // Alerta de confirmación
+            new AlertDialog.Builder(this)
+                    .setTitle("¿Estás seguro?")
+                    .setMessage("¿Deseas continuar o cancelar?")
+                    .setPositiveButton("Continuar", (dialog, which) -> {
+                        // Acción a realizar si el usuario presiona "Continuar"
+                        Toast.makeText(this, "Acción continuada", Toast.LENGTH_SHORT).show();
+
+                        // Después de la confirmación, se procede con el código
+                        setResult(RESULT_OK, i);
+                        finish(); // Finaliza la actividad
+                    })
+                    .setNegativeButton("Cancelar", (dialog, which) -> {
+                        // Acción a realizar si el usuario presiona "Cancelar"
+                        Toast.makeText(this, "Acción cancelada", Toast.LENGTH_SHORT).show();
+                    })
+                    .show(); // Mostrar el diálogo
         }
     }
 

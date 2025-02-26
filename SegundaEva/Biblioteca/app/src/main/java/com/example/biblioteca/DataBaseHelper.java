@@ -8,6 +8,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
+
     Context context;
     String sqlCreate = "CREATE TABLE libros (_id integer primary key autoincrement, \n" +
             "\t categoria text not null, titulo text not null, autor text not null, idioma text, \n" +
